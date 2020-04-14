@@ -37,11 +37,7 @@ router.post('/', (req, res) => {
   const result = getEstimate(req);
   const { data, impact, severeImpact } = result;
 
-  res.status(200).json({
-    data,
-    impact,
-    severeImpact
-  });
+  res.status(200).json(result);
 });
 
 router.post('/:optional', (req, res) => {
@@ -52,11 +48,7 @@ router.post('/:optional', (req, res) => {
   const result = getEstimate(req);
   const { data, impact, severeImpact } = result;
 
-  res.status(200).json({
-    data,
-    impact,
-    severeImpact
-  });
+  res.status(200).json(result);
 });
 
 router.get('/logs', (req, res) => {
