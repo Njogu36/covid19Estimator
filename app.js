@@ -7,7 +7,7 @@ const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
-const estimatorRoutes = require('./src/routes/estimator');
+const estimatorRoutes = require('./src/index.js');
 
 app.use(
   morgan(
